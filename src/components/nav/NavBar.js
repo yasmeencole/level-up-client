@@ -6,13 +6,13 @@ export const NavBar = (props) => {
     return (
         <ul className="navbar">
             <li className="navbar__item">
-                Navigation link
+            <Link>Games</Link>
             </li>
             <li className="navbar__item">
-                Navigation link
+            <Link>Events</Link>
             </li>
             <li className="navbar__item">
-                Navigation link
+            <Link>Profile</Link>
             </li>
             {
                 (localStorage.getItem("lu_token") !== null) ?
@@ -32,6 +32,7 @@ export const NavBar = (props) => {
                             <Link className="nav-link" to="/register">Register</Link>
                         </li>
                     </>
-            }        </ul>
+            }        
+        </ul>
     )
 }
