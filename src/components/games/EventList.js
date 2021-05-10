@@ -6,6 +6,7 @@ export const EventList = (props) => {
     const { events, getEvents } = useContext(EventContext)
 
     useEffect(() => {
+        console.log("Fetching events data from API")
         getEvents()
     }, [])
 

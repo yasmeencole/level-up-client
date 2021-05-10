@@ -118,6 +118,7 @@ code {
 .btn-2 {
 	background: #2ecc71;
 	color: #fff;
+	padding: 2em;
 }
 
 .btn-2:hover {
