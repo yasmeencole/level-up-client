@@ -18,6 +18,9 @@ export const GameList = (props) => {
 
     return (
         <>
+        <header className="games__header">
+            <h1>Level Up Games</h1>
+        </header>
         <button className="btn btn-2 btn-sep icon-create"
                     onClick={() => {
                         history.push({ pathname: "/games/new" })
