@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { GameContext } from "./GameProvider.js"
+import "./Game.css"
 
 export const GameList = (props) => {
     const { games, getGames } = useContext(GameContext)
