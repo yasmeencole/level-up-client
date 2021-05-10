@@ -1,0 +1,12 @@
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 3px solid rgb(139, 1, 139);
+}

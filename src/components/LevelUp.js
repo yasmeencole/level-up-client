@@ -18,7 +18,7 @@ export const LevelUp = () => (
             }
         }} />
 
-        <Route path="/login" render={Login} />
-        <Route path="/register" render={Register} />
+        <Route exact path="/login" render={Login} />
+        <Route exact path="/register" render={Register} />
     </>
 )
