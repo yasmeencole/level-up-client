@@ -1,12 +1,12 @@
-/* .events {
+.events {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-} */
-/* 
-.events {
+} 
+
+.event {
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
     border: 3px solid rgb(139, 1, 139);
-} */
+}
