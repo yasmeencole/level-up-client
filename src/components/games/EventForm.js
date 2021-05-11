@@ -13,10 +13,11 @@ export const EventForm = () => {
 
     const [currentEvent, setCurrentEvent] = useState({
         host_id: 0,
+        name: "",
         game_id: 0,
         description: "",
-        date: "",
-        time: ""
+        date: new Date(),
+        time: new Date()
     })
 
     useEffect(() => {
@@ -24,6 +25,12 @@ export const EventForm = () => {
         getGames()
     }, [])
 
+    // const changeEventState = (domEvent) => {
+    //     const newEvent = { ...currentEvent }
+    //     let selectedValue = domEvent.target.value
+    //     newEvent[domEvent.target.id] = selectedValue
+    //     setCurrentEvent(newEvent)
+    // }
     const changeEventGameState = (event) => {
         const newEventState = { ...currentEvent }
         newEventState.game_id = event.target.value
@@ -126,8 +133,8 @@ export const EventForm = () => {
                             game_id: parseInt(currentEvent.game_id),
                             name: currentEvent.name,
                             description: currentEvent.description,
-                            time: currentEvent.date,
-                            date: currentEvent.time
+                            time: currentEvent.time,
+                            date: currentEvent.date
                         }
 
                         // Send POST request to your API
