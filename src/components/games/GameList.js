@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect } from "react"
 import { GameContext } from "./GameProvider.js"
 import "./Game.css"
 import { useHistory } from "react-router-dom";
@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 export const GameList = (props) => {
     const { games, getGames } = useContext(GameContext)
 
-    // const [ allGames, setFiltered ] = useState([])
     const history = useHistory()
 
 
@@ -31,7 +30,6 @@ export const GameList = (props) => {
             {
                 games.map(game => {
                     return <section key={`game--${game.id}`} className="game">
-                        
                         <div className="game__title">
                             <h2>
                             {game.title} by {game.maker}
@@ -39,7 +37,18 @@ export const GameList = (props) => {
                         </div>
                         <div className="game__players">Number of Players: {game.number_of_players}</div>
                         <div className="game__skillLevel">Skill Level: {game.skill_level}</div>
+
+                        <div className="game__edit">
+                            <button className="btn btn-3 icon-create"
+                                onClick={() => {
+                                    history.push({pathname: `/games/${game.id}/update`})
+                                }
+                            }
+                                >Edit
+                            </button>
+                        </div>
                     </section>
+
                 })
             }
         </article>
